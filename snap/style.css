@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: 'Epilogue', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(0, 0%, 98%);
+    width: 1440px;
+}
+
+/*========================== CSS HEADER ====================================*/
+
+header{
+    width: 100%;
+    height: 80px;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav .naveizq{
+    width: 700px;
+    height: auto;
+    display: flex;
+    margin-left: 50px;
+    margin-top: 30px;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .naveder{
+    width: 600px;
+    height: auto;
+    display: flex;
+    margin-top: 30px;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .naveizq li a{
+    margin-right: 30px;
+    margin-left: 15px;
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+}
+
+header nav .naveizq li{
+    position: relative;
+}
+
+header nav .naveder li a{
+    margin-right: 30px;
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+}
+
+header nav .naveder .registros{
+    border: 1.5px solid hsl(0, 0%, 41%);
+    border-radius: 12px;
+    padding: 10px 20px;
+}
+
+header nav .naveizq .despe1 ul{
+    width: max-content;
+    display: none;
+    list-style: none;
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px 0;
+    padding: 5px 0px 15px 0px;
+    margin-top: 10px;
+}
+
+header nav .naveizq .despe2 ul{
+    width: max-content;
+    display: none;
+    list-style: none;
+    position: absolute;
+    align-content: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px 0;
+    padding: 5px 0px 15px 0px;
+    margin-top: 10px;
+}
+
+header nav .naveizq .despe1 li{
+    margin-top: 8px;
+    text-align: justify;
+}
+
+header nav .naveizq .despe2 li{
+    margin-top: 8px;
+}
+
+header nav .naveizq .despe1 .mico{
+    width: 10px;
+    margin-right: 10px;
+}
+
+header nav .naveizq .logoi{
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+header nav .naveizq .despe1 a{
+    margin: 15px;
+}
+
+header nav .naveizq .despe2 a{
+    margin: 15px;
+}
+
+header nav .naveizq li a:hover{
+    color: hsl(0, 0%, 8%);
+}
+
+header nav .naveizq li a:hover > .cambi img{
+    content: url("./imagenes/icon-arrow-up.svg");
+}
+
+header nav .naveizq .despe1:hover > ul{
+    display: flex;
+    flex-direction: column;
+}
+
+header nav .naveizq .despe2:hover > ul{
+    display: flex;
+    flex-direction: column;
+}
+
+header nav .naveder li a:hover{
+    color: hsl(0, 0%, 8%);
+    border-color: hsl(0, 0%, 8%);
+}
+
+/*========================== CSS MAIN ====================================*/
+
+main{
+    margin-top: 30px;
+    display: flex;
+}
+
+main .glori{
+    width: 45%;
+    margin-left: 250px;
+    margin-top: 90px;
+}
+
+main h1{
+    font-weight: 700;
+    font-size: 500%;
+}
+
+main .imgel{
+    width: 55%;
+    margin-right: 80px;
+
+}
+
+main .imgel > img{
+    width: 65%;
+}
+
+main .glori p{
+    font-size: 15px;
+    margin-top: 40px;
+    line-height: 20px;
+    color: hsl(0, 0%, 41%);
+}
+
+main button{
+    margin-top: 40px;
+    padding: 13px 25px;
+    border-radius: 10px;
+    color: white;
+    background-color: hsl(0, 0%, 8%);
+}
+
+main .urnapa{
+    margin-top: 80px;
+}
+
+main .urna{
+    list-style: none;
+    margin-right: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main .urna li{
+    margin-right: 10px;
+}
+
+main .urna li img{
+    width: 72px;
+}
+
+button:hover{
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 8%);
+    cursor: pointer;
+}

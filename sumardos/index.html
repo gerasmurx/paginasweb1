@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma de 2 en 2</title>
+    <style>
+        *{
+            text-align: center;
+            background-color: aqua;
+            font-size: larger;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        button{
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        button:hover{
+            cursor: pointer;
+            background-color: black;
+            color: white;
+        }
+
+        input{
+            background-color: aliceblue;
+        }
+        
+    </style>
+</head>
+<body>
+    <script src="./main.js"></script>
+    <p>Ingresa un número</p>
+    <input type="text" id="cant" value="">
+    <button onclick="sumaDos()">Sumar 2</button>
+    <p>Resultado = <input type="text" id="chg" readonly="readonly" ></p> 
+    <!-- <p>Total en pesos = <span id="chg">_____</span>$</p>  -->
+</body>
+</html>
