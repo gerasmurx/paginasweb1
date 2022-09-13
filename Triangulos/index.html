@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lados del triangulo</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <script src="./main.js"></script>
+    <header>
+        <h1>Inserta los lados del triangulo</h1>
+    </header>
+    <main>
+        <section class="izq">
+            <p>Lado A :  </p>
+            <input id="ladoA" type="text"><br>
+        </section>
+        <div style="z-index: -1;">
+            <img src="./imgs/triangulos.png" alt="triangulo">
+        </div>
+        <section class="der">
+            <p>Lado B :</p>
+            <input id="ladoB" type="text"><br>
+        </section>
+    </main>
+    <footer>
+        <div class="basein">
+            <p>Base :</p>
+            <input id="base" type="text"><br>
+        </div>
+        <div>
+            <button onclick="deteTrin()">Determinar tipo de triangulo</button>
+            <input id="resul" type="text" readonly>
+        </div>
+    </footer>
+</body>
+</html>
