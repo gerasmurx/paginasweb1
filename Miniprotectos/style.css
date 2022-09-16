@@ -1,0 +1,666 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* max-width: 375px; */
+}
+
+body{
+    min-width: 375px;
+}
+
+
+:root{
+    /* Colores Primarios */
+
+    --Rojo-Suave: hsl(7, 99%, 70%);
+    --Amarillo: hsl(51, 100%, 49%);
+    --titulos-cyan: hsl(167, 40%, 24%); /*diseño gradico de texto*/
+    --texto: hsl(198, 62%, 26%); /*texto fotografico*/
+    --Cyan-moderado-oscuro: hsl(168, 34%, 41%); /*pie de pagina*/
+
+    /* Colores neutrales */
+
+    --Azul-Oscuro-desaturado: hsl(212, 27%, 19%);
+    --Azul-grisáceo-muy-oscuro: hsl(213, 9%, 39%);
+    --Azul-grisáceo-oscuro: hsl(232, 10%, 55%);
+    --Azul-grisáceo: hsl(210, 4%, 67%);
+    --Blanco: hsl(0, 0%, 100%);
+
+    /* Fuentes */
+
+    --barlow: 'Barlow', sans-serif;
+    --frances: 'Fraunces', serif;
+}
+
+/* estructura general del header */
+
+header{
+    background-image: url(./images/mobile/image-header.jpg);
+    background-size: cover;
+    background-repeat: round;
+    width: auto;
+    height: 538px;
+    align-items: center;
+}
+
+header > h1{
+    color: white;
+    font-family: var(--frances);
+    text-align: center;
+    width: 300px;
+    margin: auto;
+    margin-top: 90px;
+    letter-spacing: 9px;
+}
+
+header .flecha{
+    width: 10%;
+    text-align: center;
+    margin: auto;
+    margin-top: 70px;
+}
+
+/* img{
+    width: 100%;
+} */
+
+/* Barra de navegacion */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+nav .logohead{
+    color: white;
+    text-decoration: none;
+    font-family: var(--barlow);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+nav .navi{
+    display: flex;
+    list-style: none;
+    transform: scale(0);
+}
+
+/* nav .hambu{
+    transform: scale(1);
+} */
+
+header .hambu{
+    width: 100%;
+}
+
+header .hambu > a{
+    display: block;
+    margin: auto;
+    text-align: end;
+    margin-top: -32px;
+}
+
+header .hambu  a > img{
+    margin-right: 20px;
+    
+}
+
+nav .navi li > a{
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+    padding: 14px 25px;
+    font-family: var(--barlow);
+    font-size: 16px;
+    border-radius: 24px;
+}
+
+nav .navi li > .cont{
+    background-color: var(--Blanco);
+    color: black;
+    font-family: var(--frances);
+    font-weight: 700;
+    font-size: 12px;
+}
+
+nav .navi li > .cont:hover{
+    background-color: hsl(199, 100%, 81%);
+    color: var(--Blanco);
+    cursor: pointer;
+}
+
+/* aqui inicia el main */
+
+main .items1{
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+}
+
+main .huevo > img{
+    width: 100%;
+}
+
+main .txt-huevo{
+    padding: 25px 25px 80px;
+}
+
+main .items1 h1{
+    font-family: var(--frances);
+    font-size: 30px;
+    width: 300px;
+    margin: 0px auto 0px;
+    margin-top: 40px;
+    color: var(--Azul-Oscuro-desaturado);
+}
+
+main .items1 p{
+    font-family: var(--barlow);
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    color: var(--texto);
+    line-height: 25px;
+    
+}
+
+main .items1 a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 0px 10px;
+    border-radius: 5px;
+    color: var(--Azul-Oscuro-desaturado);
+    font-family: var(--frances);
+    font-weight: 900;
+    font-size: 18px;
+    position: relative;
+    align-items: center;
+}
+
+.lernh::before{
+    content: "";
+    height: 10px;
+    width: 150px;
+    background-color: hsl(49, 97%, 87%);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+}
+
+.lernh:hover::before{
+    background-color: hsl(50, 98%, 49%);
+    cursor: pointer;
+}
+
+/* -------------------------------------I-T-E-M-S 2--------------------------------- */
+
+main .items2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+main .copas > img{
+    width: 100%;
+}
+
+main .copa{
+    padding: 25px 25px 80px;
+}
+
+main .items2 h1{
+    font-family: var(--frances);
+    font-size: 30px;
+    width: 300px;
+    margin: auto;
+    margin-top: 40px;
+    color: var(--Azul-Oscuro-desaturado);
+}
+
+main .items2 p{
+    font-family: var(--barlow);
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    color: var(--texto);
+    line-height: 25px;
+}
+
+main .items2 a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    color: var(--Azul-Oscuro-desaturado);
+    font-family: var(--frances);
+    font-weight: 900;
+    position: relative;
+    align-items: center;
+    font-size: 18px;
+    padding: 0px 10px;
+}
+
+.lernc::before{
+    content: "";
+    height: 10px;
+    width: 150px;
+    background-color: hsl(10, 84%, 93%);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+}
+
+.lernc:hover::before{
+    background-color: hsl(9, 99%, 69%);
+    cursor: pointer;
+}
+
+/* -------------------------------------I-T-E-M-S 3--------------------------------- */
+
+main .items3{
+    text-align: center;
+}
+
+main .items3 h1{
+    font-family: var(--frances);
+    font-size: 30px;
+    color: var(--Azul-Oscuro-desaturado);
+    margin-top: 320px;
+}
+
+main .items3 p{
+    font-family: var(--barlow);
+    font-size: 16px;
+    color: var(--texto);
+    line-height: 25px;
+}
+
+main .cereza{
+    background-image: url(./images/mobile/image-graphic-design.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 538px;
+    padding: 25px 20px 80px;
+}
+
+main .naranja{
+    background-image: url(./images/mobile/image-photography.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 538px;
+    padding: 25px 20px 80px;
+}
+
+/* -------------------------------------TESTIMONIOS SECCION--------------------------------- */
+
+main .test{
+    text-align: center;
+    padding: 25px 20px 80px;
+}
+
+main .test h1{
+    font-family: var(--frances);
+    font-size: 16px;
+    letter-spacing: 5px;
+    color: var(--Azul-grisáceo);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+main .test h2{
+    font-family: var(--frances);
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--titulos-cyan);
+    margin-bottom: 10px;
+}
+
+main .test p{
+    font-family: var(--barlow);
+    color: var(--texto);
+    margin-bottom: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+main .emili > img{
+    width: 20%;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+main .tomas > img{
+    width: 20%;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+main .jenni > img{
+    width: 20%;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+main .test .greey{
+    color: var(--Azul-grisáceo);
+}
+
+main .jenni{
+    width: 300px;
+    margin: auto;
+}
+
+main .tomas{
+    width: 300px;
+    margin: auto;
+}
+
+main .emili{
+    width: 300px;
+    margin: auto;
+}
+
+/* ------------------------------ITEMS 4 y 5 cuadricula de imagenes------------------------------ */
+
+main .items4{
+    display: flex;
+}
+
+main .items4 div{
+    width: 50%;
+}
+
+main .items4 div> img{
+    width: 100%;
+}
+
+main .items5{
+    display: flex;
+    margin-top: -5px;
+}
+main .items5 div{
+    width: 50%;
+}
+
+main .items5 div> img{
+    width: 100%;
+}
+
+/* ------------------------------Aqui empieza el FOOTER------------------------------ */
+
+footer{
+    text-align: center;
+    background-color: hsl(167, 44%, 70%);
+    margin-top: -28px;
+    padding: 30px 20px 80px;
+}
+
+footer h1{
+    font-family: var(--barlow);
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: var(--titulos-cyan);
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+
+footer .refer{
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    list-style: none;
+}
+
+footer .refer li > a{
+    text-decoration: none;
+    font-family: var(--barlow);
+    color: var(--Cyan-moderado-oscuro);
+}
+
+footer .social{
+    width: 200px;
+    margin: auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 60px;
+}
+
+footer .refer li > a:hover{
+    color: var(--Blanco);
+    cursor: pointer;
+}
+
+footer .social .faceb:hover{
+    content: url(./images/blancos/icon-facebook.svg);
+    cursor: pointer;
+}
+footer .social .insta:hover{
+    content: url(./images/blancos/icon-instagram.svg);
+    cursor: pointer;
+}
+
+footer .social .tiwtt:hover{
+    content: url(./images/blancos/icon-twitter.svg);
+    cursor: pointer;
+}
+
+footer .social .pintt:hover{
+    content: url(./images/blancos/icon-pinterest.svg);
+    cursor: pointer;
+}
+
+/* ----------------------------------Vista escritorio---------------------------------- */
+
+@media (min-width: 1024px){
+
+    body{
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    header{
+        background-image: url(./images/desktop/image-header.jpg);
+        height: 750px;
+    }
+
+    header h1{
+        width: auto;
+        margin-top: 150px;
+    }
+
+    header .flecha{
+        margin-top: 70px;
+    }
+
+    header .flecha > img{
+        width: 30%;
+    }
+
+    nav{
+        padding:30px;
+    }
+
+    nav .navi{
+        transform: scale(1);
+        margin-top: 15px;
+    }
+
+    header .hambu{
+        transform: scale(0);
+    }
+    nav .logohead{
+        font-size: 28px;
+    }
+
+ /* ---------------------main --------------------------  */
+
+    main .items1{
+        flex-direction: row;
+    }
+
+    main .items1 .txt-huevo{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    main .items1 .huevo{
+        width: 50%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden
+    }
+
+    main .items1 .huevo > img{
+        content: url(./images/desktop/image-transform.jpg);
+        flex-shrink: 0;
+        min-width: 100%;
+        min-height: 100%
+    }
+
+    main .items1 .txt-huevo p{
+        max-width: 500px;
+        text-align: left;
+    }
+
+    main .items1 .txt-huevo h1{
+        margin: 0px;
+        margin-left: -200px;
+        text-align: left;
+    }
+
+    main .items1 .txt-huevo a{
+        margin: 0px;
+        margin-left: -350px;
+        text-align: left;
+    }
+
+    main .items2{
+        flex-direction: row;
+    }
+
+    main .items2 .copa{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    main .items2 .copas{
+        width: 50%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden
+    }
+
+    main .items2 .copas > img{
+        content: url(./images/desktop/image-stand-out.jpg);
+        flex-shrink: 0;
+        min-width: 100%;
+        min-height: 100%
+    }
+
+    main .items2 .copa p{
+        max-width: 500px;
+        text-align: left;
+    }
+
+    main .items2 .copa h1{
+        margin: 0px;
+        margin-left: -200px;
+        text-align: left;
+    }
+
+    main .items2 .copa a{
+        margin: 0px;
+        margin-left: -350px;
+        text-align: left;
+    }
+
+    main .items3{
+        display: flex;
+    }
+
+    main .cereza{
+        background-image: url(./images/desktop/image-graphic-design.jpg);
+        width: 50%;
+    }
+
+    main .naranja{
+        background-image: url(./images/desktop/image-photography.jpg);
+        width: 50%;
+    }
+
+    main .cereza p{
+        max-width: 350px;
+        margin: auto;
+    }
+
+    main .naranja p{
+        max-width: 350px;
+        margin: auto;
+    }
+
+    main .gente{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    main .gente .emili{
+        margin: 10px;
+    }
+
+    main .gente .tomas{
+        margin: 10px;
+    }
+
+    main .gente .jenni{
+        margin: 10px;
+    }
+
+    main .cuadri{
+        display: flex;
+    }     
+    
+    main .cuadri .items5{
+        margin: 0;
+    }
+
+    main .cuadri .items4 .botellas{
+        content: url(./images/desktop/image-gallery-milkbottles.jpg);
+    }
+    main .cuadri .items4 .oran{ 
+        content: url(./images/desktop/image-gallery-orange.jpg);
+    }
+
+    main .cuadri .items5 .vono{
+        content: url(./images/desktop/image-gallery-cone.jpg);
+    }
+    main .cuadri .items5 .sugi{ 
+        content: url(./images/desktop/image-gallery-sugarcubes.jpg);
+    }
+
+    
+}
