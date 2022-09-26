@@ -232,10 +232,6 @@ h3{
     margin-bottom: 30px;
 }
 
-.cardfondo{
-    box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
-}
-
 .cardm .frontend{
     width: 67px;
     height: 67px;
@@ -582,6 +578,19 @@ footer .sociales{
     header ul{
         transform: scale(1);
     }
+
+    .accesos li > a:hover::before{
+        content: "";
+        text-align: center;
+        height: .2rem;
+        width: 3rem;
+        background-color: var(--rojos-cajas);
+        border-radius: 10px;
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+        cursor: pointer;
+    }
     
     .hambur{
         transform: scale(0);
@@ -666,14 +675,16 @@ footer .sociales{
     }
 
     .cardmgrid{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 50rem);
+        grid-gap: 1%;
         margin-left: 8%;
         margin-right: 8%;
     }
 
-    .cardmgrid{
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 50rem);
-        grid-gap: 1%;
+    .cardm:hover{
+        box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
+        cursor: pointer;
     }
 
     .cardmgrid img{
@@ -757,6 +768,10 @@ footer .sociales{
     .foot1{
         display: flex;
         justify-content: space-evenly;
+    }
+
+    .accesos2 li > a:hover{
+        color: var(--textos-azules);
     }
     
     .emailbottom{
