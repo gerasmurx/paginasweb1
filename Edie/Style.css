@@ -1,0 +1,809 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-texto-titulos: #333333;
+    --font-family: 'Heebo', sans-serif;
+    --textos-full: 'Poppins', sans-serif;
+    --monsse-textos: 'Montserrat', sans-serif;
+    --textos-azules: #2D9CDB;
+    --textos-oscuros:#4F4F4F;
+    --textos-grises: #828282;
+    --fondos-emails: #F2F2F2;
+    --textos-emails: #BDBDBD;
+    --verdes-cajas: #27AE60;
+    --rojos-cajas: #EB5757;
+    --fondos-grises-2: #E0E0E0;
+    --fondo-footer: #100E1D;
+}
+
+
+header{
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+}
+
+header .titulo-1{
+    text-decoration: none;
+    color: var(--color-texto-titulos);
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 24px;
+}
+
+header nav{
+    width: 300px;
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    transform: scale(0);
+    margin-top: 13px;
+}
+
+.accesos li{
+    margin-right: 28px;
+    width: max-content;
+}
+
+.accesos li > a{
+    color: var(--color-texto-titulos);
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.hambur{
+    width: 18px;
+    height: 18px;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    justify-self: right;
+}
+
+/* ----------------------------------aqui empieza el main------------------------ */
+
+.uptext{
+    color: var(--textos-azules);
+    font-size: 12px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    margin-top: 47px;
+    margin-left: 30px;
+}
+
+.toph1{
+    color: var(--color-texto-titulos);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 36px;
+    margin-left: 30px;
+    margin-right: 56px;
+    max-width: 543px;
+}
+
+/* -----------------------------------hero image--------------------------------- */
+
+.herotop{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.herotop img{
+    width: 100%;
+    height: 145px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* --------------------------------primera tarjeta----------------------------- */
+
+.topcard{
+    max-width: 366px;
+    /* display: flex;
+    justify-content: center; */
+    margin-left: 30px;
+    margin-top: 22px;
+}
+
+main{
+    padding: 10px;
+}
+
+main .tarjetatop h1{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 36px;
+    color: var(--color-texto-titulos);
+    margin-bottom: 20px;
+    margin-right: 90px;
+}
+
+main .tarjetatop .pnormal{
+    font-family: var(--font-family);
+    color: var(--textos-oscuros);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    margin-right: 43px;
+}
+
+.tarjetatop .pchico{
+    font-size: 10px;
+    margin-top: 20px;
+    font-family: var(--font-family);
+    color: var(--textos-grises);
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 15px;
+}
+
+.tarjetatop .email{
+    display: flex;
+    background-color: var(--fondos-emails);
+    border-radius: 12px;
+    height: 47px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3px;
+    font-family: var(--font-family);
+    padding: 4px;
+}
+
+.tarjetatop .email p{
+    margin-left: 19px;
+    color: var(--textos-emails);
+}
+
+.tarjetatop .email button{
+    padding: 11px 21px;
+    color: var(--fondos-emails);
+    border-radius: 12px;
+    background-color: var(--textos-azules);
+    border: 0px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* ----------------------------------------middle h2------------------------------------ */
+
+.middleh2{
+    margin-top: 100px;
+    font-weight: 500;
+    font-size: 24px;
+    font-family: var(--font-family);
+    color: var(--color-texto-titulos);
+    margin-left: 39px;
+    margin-right: 100px;
+}
+
+/* --------------------------------------seccion de las tarjeta de desarrollador-------- */
+
+.cards-middle{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.cardm{
+    width: 341px;
+    padding: 46px 34px;
+    border-radius: 24px
+}
+
+.cardm .uiux{
+    width: 67px;
+    height: 67px;
+    padding: 20.5px;
+    background-color: var(--textos-azules);
+    border-radius: 16px;
+}
+
+.cardm .uiux > img{
+    width: 27px;
+}
+
+h3{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 24px;
+    margin-top: 35px;
+    color: var(--color-texto-titulos);
+}
+
+.cardm > p{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 24px;
+    margin-bottom: 30px;
+}
+
+.cardfondo{
+    box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
+}
+
+.cardm .frontend{
+    width: 67px;
+    height: 67px;
+    padding: 20.5px;
+    background-color: var(--textos-azules);
+    border-radius: 16px;
+    background: var(--verdes-cajas);
+}
+
+.cardm .frontend > img{
+    width: 29px;
+}
+
+.cardm .backend{
+    width: 67px;
+    height: 67px;
+    padding: 22px 19px;
+    background-color: var(--textos-azules);
+    border-radius: 16px;
+    background: var(--rojos-cajas);
+}
+
+.cardm .backend > img{
+    width: 30px;
+    height: 24px;
+}
+.greyy{
+    text-decoration: none;
+    font-family: var(--font-family);
+    border-radius: 12px;
+    background-color: var(--fondos-grises-2);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--textos-grises);
+    padding: 9px 13px;
+}
+
+.azul{
+    text-decoration: none;
+    font-family: var(--font-family);
+    border-radius: 12px;
+    background-color: var(--textos-azules);
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    padding: 9px 13px;
+}
+
+/* ------------------------------------ seccion de grid imagenes------------------------------ */
+
+.cardmgrid{
+    margin-top: 40px;
+    display: grid;
+    grid-template: auto / auto;
+    grid-gap: 20px;
+    font-family: var(--font-family);
+}
+
+.cardtopizq{
+    width: 100%;
+}
+
+.cardmgrid img{
+    width: 100%;
+    height: 350px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.cardmgrid .pchico{
+    font-size: 10px;
+    margin-top: 5px;
+    font-family: var(--font-family);
+    color: var(--textos-grises);
+    font-weight: 500;
+    font-size: 10px;
+}
+
+.cardmgrid h4{
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--color-texto-titulos);
+}
+
+.cajaflecha{
+    margin-top: 30px;
+}
+
+.flecha{
+    text-decoration: none;
+    color: var(--textos-azules);
+    font-weight: 500;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.flecha > img{
+    width: 16px;
+    height: 20px;
+    margin-left: 12px;
+}
+
+/* -----------------------------------seccion meet team------------------------------- */
+
+.meetteam{
+    margin-top: 60px;
+}
+
+.tarjetaizq{
+    font-family: var(--font-family);
+    width: 280px;
+}
+
+.tarjetaizq .naranja{
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--rojos-cajas);
+}
+
+.tarjetaizq h2{
+    font-weight: 500;
+    font-size: 36px;
+    font-family: var(--font-family);
+    color: var(--color-texto-titulos);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* margin-right: 100px; */
+}
+
+.tarjetaizq .pchico{
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--textos-oscuros);
+}
+
+/* ----------------------aqui empieza el grid de imageners de personas----------------- */
+
+.gridbottom{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 8px;
+    grid-template-areas: 
+    "a b"
+    "a c"
+    ;
+}
+
+.gridbottom img{
+    border-radius: 15px;
+}
+
+.cajaimg1 > img{
+    object-fit: contain;
+    width: 100%;
+}
+
+.img2 > img{
+    object-fit: contain;
+    width: 95%;
+}
+
+.img3 > img{
+    object-fit: contain;
+    width: 85%;
+}
+
+.img1{
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    grid-area: a;
+}
+
+.img2{
+    grid-area: c;
+    display: flex;
+    align-items: baseline;
+}
+
+.img3{
+    grid-area: b;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* --------------------------------------h2 de abajo------------------------------------ */
+
+.h3bottom{
+    width: 90%;
+    font-weight: 500;
+    font-size: 24px;
+    font-family: var(--font-family);
+    color: var(--color-texto-titulos);
+    margin-top: 80px;
+    /* margin-right: 100px; */
+}
+
+/* --------------------------------incia tarjeta del footer--------------------------- */
+
+.cards{
+    margin-top: 30px;
+}
+
+.tarjetabottom{
+    width: 351px;
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    /* grid-template-rows: repeat(2, max-content); */
+    grid-template-areas: 
+    "a b"
+    "a c"
+    ;
+}
+
+.tarjetabottom img{
+    grid-area: a;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.tarjetabottom h4{
+    grid-area: b;
+    color: var(--color-texto-titulos);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+.tarjetabottom p{
+    grid-area: c;
+    font-family: var(--font-family);
+    color: var(--textos-grises);
+    font-weight: 500;
+    font-size: 18px;
+    margin-left: 30px;
+}
+
+/* --------------------------aqui empieza el footer-------------------------------- */
+
+footer{
+    background-color: var(--fondo-footer);
+    margin-top: 70px;
+}
+
+footer nav{
+    padding: 30px;
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.accesos2 li > a{
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 200%;
+}
+
+footer .sociales{
+    padding: 30px;
+}
+
+.sociales h2{
+    color: white;
+    font-family: var(--textos-full);
+    font-size: 36px;
+    font-weight: 800;
+    
+}
+
+.emailbottom{
+    padding: 35px;
+}
+
+.emailbottom .email{
+    max-width: 350px;
+    display: flex;
+    background-color: var(--fondos-emails);
+    border-radius: 12px;
+    height: 47px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3px;
+    font-family: var(--font-family);
+    padding: 4px;
+}
+
+.emailbottom .pchico{
+    font-family: var(--font-family);
+    color: var(--textos-emails);
+}
+
+.emailbottom .email button{
+    padding: 11px 21px;
+    color: var(--fondos-emails);
+    border-radius: 12px;
+    background-color: var(--textos-azules);
+    border: 0px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.emailbottom p{
+    margin-left: 19px;
+    color: var(--textos-emails);
+}
+
+.fin{
+    margin-top: 130px;
+    padding-bottom: 24px;
+    color: var(--fondos-emails);
+    font-family: var(--monsse-textos);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+}
+
+@media(min-width: 800px){
+
+    body{
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    header{
+        padding: 42px;
+    }
+
+    header nav{
+        width: 100%;
+    }
+    
+    header ul{
+        transform: scale(1);
+    }
+    
+    .hambur{
+        transform: scale(0);
+    }
+
+    header .titulo-1{
+        font-size: 36px;
+    }
+
+    .uptext{
+        font-size: 18px;
+        line-height: 27px;
+        margin-left: 13%;
+    }
+
+    .toph1{
+        font-size: 48px;
+        line-height: 72px;
+        margin-left: 13%;
+        margin-top: 10px;
+    }
+
+    .herotop{
+        max-width: 1332px;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    .herotop img{
+        height: 354px;
+        object-fit: none;
+    }
+
+    .topcard{
+        margin-left: 13%;
+        
+    }
+    
+    main .tarjetatop h1{
+        font-size: 48px;
+        line-height: 72px;
+        margin: 0;
+    }
+    
+    main .tarjetatop .pnormal{
+        font-size: 18px;
+        line-height: 27px;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+    
+    .tarjetatop .pchico{
+        font-size: 14px;
+        line-height: 21px;
+    }
+    
+    .tarjetatop .email{
+        height: 57px;
+    }
+    
+    .tarjetatop .email p{
+        font-size: 18px;
+    }
+    
+    .tarjetatop .email button{
+        padding: 15px 27px;
+        font-size: 18px;
+    }
+
+    .middleh2{
+        margin-left: 8%;
+        margin-top: 180px;
+        max-width: 346px;
+        font-size: 36px;
+        line-height: 54px;
+    }
+
+    .cards-middle{
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .cardmgrid{
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+
+    .cardmgrid{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 50rem);
+        grid-gap: 1%;
+    }
+
+    .cardmgrid img{
+        width: 100%;
+        height: 36rem;
+        border-radius: 15px;
+        object-fit: cover;
+    }
+
+    .flecha > img{
+        width: 16px;
+        height: 20px;
+    }
+
+    .cardtopizq{
+        margin-top: 10em;
+    }
+
+    .cardbottomizq{
+        margin-top: 8em;
+    }
+
+    .cardbottomder{
+        margin-top: -3em;
+    }
+
+    .cardmgrid .pchico{
+        font-size: 14px;
+        line-height: 21px;
+    }
+    
+    .cardmgrid h4{
+        font-size: 24px;
+        line-height: 36px;
+    }
+    
+    .cajaflecha{
+        margin-top: 10em;
+        text-align: right;
+        align-self: baseline;
+    }
+    
+    .flecha{
+        font-size: 24px;
+    }
+
+    .meetteam{
+        display: flex;
+        margin-left: 8%;
+        justify-content: space-between;
+        margin-top: 15rem;
+        margin-right: 8%;
+    }
+
+    .tarjetaizq{
+        align-self: center;
+    }
+
+    .h3bottom{
+        max-width: 800px;
+        font-size: 36px;
+        line-height: 54px;
+        margin-left: 8%;
+        text-align: justify;
+        margin-top: 15rem;
+    }
+
+    .cards{
+        margin-left: 8%;
+        margin-top: 3em;
+    }
+
+    footer{
+        margin-top: 12rem;
+    }
+    
+    /* footer nav{
+        padding: 30px;
+    }*/
+    
+    .foot1{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .emailbottom{
+        width: 350px;
+        padding: 30px 0px;
+    }
+
+    .emailbottom .email{
+        height: 57px;
+    }
+    
+    .emailbottom .pchico{
+        font-size: 14px;
+    }
+
+    .emailbottom p{
+        font-size: 18px;
+    }
+    
+    .emailbottom .email button{
+        padding: 15px 27px;
+        font-size: 18px;
+    }
+
+    .fin{
+        margin-top: 5rem;
+    }
+    /*
+    
+    .accesos2 li > a{
+        color: white;
+        text-decoration: none;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 200%;
+    }
+    
+    footer .sociales{
+        padding: 30px;
+    }
+    
+    .sociales h2{
+        color: white;
+        font-family: var(--textos-full);
+        font-size: 36px;
+        font-weight: 800;
+        
+    } */
+}
