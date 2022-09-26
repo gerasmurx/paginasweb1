@@ -20,6 +20,18 @@
     --fondo-footer: #100E1D;
 }
 
+p{
+    line-height: 24px;
+}
+
+button{
+    cursor: pointer;
+}
+
+h1{
+    cursor: default;
+}
+
 
 header{
     width: 100%;
@@ -729,6 +741,18 @@ footer .sociales{
     
     .flecha{
         font-size: 24px;
+    }
+
+    .flecha:hover::before{
+        content: "";
+        /* text-align: center; */
+        height: .2rem;
+        width: 6rem;
+        background-color: var(--textos-azules);
+        border-radius: 10px;
+        position: absolute;
+        z-index: 1;
+        cursor: pointer;
     }
 
     .meetteam{
