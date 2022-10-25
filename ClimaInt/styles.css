@@ -1,0 +1,364 @@
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: #fafafa;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 0px;
+    background: #1e213a;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+    
+}
+
+.navbar .btn{
+    background-color: #6e707a;
+    color: white;
+}
+
+#localizar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+#localizar  i{
+    margin: auto;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+                   BARRA LATERAL
+----------------------------------------------------- */
+
+#sidebar {
+    width: 375px;
+    position: fixed;
+    top: 0;
+    left: -375px;
+    height: 100vh;
+    z-index: 999;
+    background: #1e213a;
+    color: #fff;
+    transition: all 0.3s;
+    overflow-y: scroll;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#dismiss {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: #6e707a;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#dismiss:hover {
+    background: #fff;
+    color: #7386D5;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    margin-top: 3rem;
+    background: #1e213a;
+}
+
+#sidebar ul.components {
+    padding: 20px 20px;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+#titulo-ciudades{
+    text-align: center;
+}
+
+#busqueda{
+    background-color: #1e213a;
+    width: 75%;
+    border: none;
+    color: white;
+}
+
+#ingresar{
+    background-color: #3d48ef;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    margin-left: .3rem;
+    cursor: pointer;
+}
+/* ---------------------------------------------------
+        Contenido en el main lado izquierdo aside
+----------------------------------------------------- */
+
+#content {
+    width: 375px;
+    min-width: 375px;
+    background-color: #1e213a;
+    padding-top: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+.fondoNubes{
+    padding: 0;
+    margin-top: 2.5rem;
+    position: relative;
+}
+
+.demo-bg {
+    opacity: 0.2;
+    position: absolute;
+    left: -80px;
+    top: 0;
+    width: 550px;
+    height: auto;
+    overflow: hidden;
+}
+
+.demo-contenido{
+    margin-top: 4.5em;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+.demo-contenido > img{
+    width: 42%;
+    height: 10rem;
+    object-fit: contain;
+}
+
+.parte-dos{
+
+    padding: 0;
+    text-align: center;
+}
+
+#grados{
+    display: inline;
+    color: white;
+    font-size: 6rem;
+    font-weight: 500;
+}
+
+#unidad-grande{
+    color: #a09fb1;
+    font-size: 3rem;
+}
+
+#tipo-clima{
+    color: #a09fb1;
+    font-weight: 600;
+    margin-top: 3.8rem;
+    margin-bottom: 3.8rem;
+}
+
+#locacion{
+    display: inline;
+    color: #a09fb1;
+}
+
+#dia-hoy{
+    color: #a09fb1;
+}
+
+
+/* ---------------------------------------------------
+           Contenido en el main lado derecho
+----------------------------------------------------- */
+
+.lado-derecho{
+    background-color: #100e1d;
+    min-width: 375px;
+    max-width: 375px;
+    margin: 0;
+}
+
+.selecciona-grados{
+    transform: scale(0);
+}
+
+.cards-clima{
+    width: 120px;
+    height: 177px;
+    margin-top: 1rem;
+    background-color: #1e213a;
+}
+
+.caja-izq-gd{
+    height: max-content;
+}
+
+.card-destacadosTop{
+    width: 328px;
+    height: 204px;
+    background-color: #1e213a;
+}
+
+
+.card-destacadosBottom{
+    width: 328px;
+    height: 160px;
+    background-color: #1e213a;
+}
+
+.caja-imgs-chic{
+    width: 100px;
+    height: 80px;
+}
+
+.texto-md-43{
+    font-size: 43px;
+}
+
+.texto-gd-md{
+    font-size: 60px;
+    font-weight: 700;
+}
+
+#vientos{
+    margin-top: -.6rem;
+}
+
+.manan2{
+    margin-bottom: -.1rem;
+}
+
+.top-botones{
+    width: 40px;
+    height: 40px;
+    background-color: #585676;
+    border-radius: 50%;
+}
+
+@media (min-width: 800px) {
+
+    .lado-derecho{
+        max-width: 100%;
+    }
+    .selecciona-grados{
+        transform: scale(1);
+    }
+    .caja-der-center{
+        max-width: 750px;
+        margin-top: 4rem !important;
+    }
+    
+}

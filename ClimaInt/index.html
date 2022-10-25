@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Clima-int</title>
+    <link  rel="icon"   href="./weather-app-master/favicon-32x32.png" type="image/png" />
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Bootstrap ICONS -->
+    <link rel=”stylesheet” href=”https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css”/>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Scrollbar CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <!-- Font Awesome JS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container-fluid row justify-content-center px-0 mx-0" >
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="dismiss">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x" viewBox="0 -1 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+            </div>
+            <div class="sidebar-header">
+                <input type="text" id="busqueda" placeholder="Busqueda"><button id="ingresar">Buscar</button>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p id="titulo-ciudades">Ciudades:</p>
+                <li>
+                    <a href="#" id="ciudad1">Ciudad de México</a>
+                </li>
+                <li>
+                    <a href="#" id="ciudad2">New york</a>
+                </li>
+                <li>
+                    <a href="#" id="ciudad3">Londres</a>
+                </li>
+                <li>
+                    <a href="#" id="ciudad4">Paris</a>
+                </li>
+                <li>
+                    <a href="#" id="ciudad5">Tokio</a>
+                </li>
+                <li>
+                    <a href="#" id="ciudad6">Madrid</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Contenido  -->
+        <div class="container-fluid row row-cols-auto pl-0 pr-0">
+        <!-- lado izquierdo  -->
+            <div id="content" class="container col-auto mx-0 text-start pl-3 pr-0">
+                <nav class="navbar navbar-light">
+                    <div class="container-fluid row">
+                        <button type="button" id="sidebarCollapse" class="btn">
+                            <i class="fas fa-align-left"></i>
+                            <span>Buscar lugares</span>
+                        </button>
+                        <button id="localizar" class="navbar-toggler btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" class="bi bi-geo-alt-fill" viewBox="1 -2 18 18">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="container parte-dos row">
+                        <div class="container fondoNubes">
+                            <img class="demo-bg" src="./weather-app-master/Cloud-background.png" alt="nubess">
+                        </div>
+                    </div>
+                    <div class="container col text-center row">
+                        <div class="demo-contenido mb-3">
+                            <img id="hero1" src="./weather-app-master/Shower.png" alt="Climas-img">
+                        </div>
+                        <div class="container mt-5 caja-izq-gd">
+                            <p id="grados">15</p><span class="tipo-unidades" id="unidad-grande">°C</span>
+                            <h3 id="tipo-clima">tipo de clima</h3>
+                            <p id="dia-hoy">Hoy - <span id="fecha">fecha</span></p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="#a09fb1" class="bi bi-geo-alt-fill" viewBox="1 -2 18 18">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                            </svg>
+                            <p id="locacion">locacion</p>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        <!-- lado derecho  -->
+            <div class="container-fluid col lado-derecho">
+                <div class="container row m-auto px-0 justify-content-end caja-der-center">
+        <!-- lado superior grados  -->
+                    <div class="container p-0 m-0 row justify-content-end selecciona-grados">
+                        <div class="col-auto">
+                            <button id="celsios" class="top-botones p-2 btn">°C</button>
+                        </div>
+                        <div class="col-auto">
+                            <button id="farenheit" class="top-botones p-2 btn">°F</button>
+                        </div>
+                    </div>
+        <!-- lado superior grados  -->
+        <!-- lado intermedio superior grados  -->
+                    <div class="container row mx-0 mx-md-0 mt-md-5 px-4 px-md-0 text-white justify-content-between">
+                        <div class="col-auto px-0 mt-4 cards-clima p-2 text-center"><p class="manan mx-0 mb-1">Mañana</p><div class="container row m-0 p-0 mb-4 caja-imgs-chic"><img id="img-caja0" class="img-fluid row justify-content-center mx-0 mb-2 p-2 imgs-chic" src="./weather-app-master/LightCloud.png" alt="climas22"></div><p id="tempsmax0" class="d-inline">16</p><span class=" mr-3 tipo-unidades">°C</span><p class="d-inline" id="temp-min-0">11</p><span class="tipo-unidades">°C</span></div>
+                        <div class="col-auto px-0 mt-4 cards-clima p-2 text-center"><p class="dia-0 m-0 mb-1" id="caja1">d-f-ms</p><div class="container row m-0 p-0 mb-4 caja-imgs-chic"><img id="img-caja1" class="img-fluid row justify-content-center mx-0 mb-2 p-2 imgs-chic" src="./weather-app-master/LightCloud.png" alt="climas22"></div><p id="tempsmax1" class="d-inline">16</p><span class="mr-3 tipo-unidades">°C</span><p class="d-inline" id="temp-min-1">11</p><span class="tipo-unidades">°C</span></div>
+                        <div class="col-auto px-0 mt-4 cards-clima p-2 text-center"><p class="dia-1 m-0 mb-1" id="caja2">d-f-ms</p><div class="container row m-0 p-0 mb-4 caja-imgs-chic"><img id="img-caja2" class="img-fluid row justify-content-center mx-0 mb-2 p-2 imgs-chic" src="./weather-app-master/LightCloud.png" alt="climas22"></div><p id="tempsmax2" class="d-inline">16</p><span class="mr-3 tipo-unidades">°C</span><p class="d-inline" id="temp-min-2">11</p><span class="tipo-unidades">°C</span></div>
+                        <div class="col-auto px-0 mt-4 cards-clima p-2 text-center"><p class="dia-2 m-0 mb-1" id="caja3">d-f-ms</p><div class="container row m-0 p-0 mb-4 caja-imgs-chic"><img id="img-caja3" class="img-fluid row justify-content-center mx-0 mb-2 p-2 imgs-chic" src="./weather-app-master/LightCloud.png" alt="climas22"></div><p id="tempsmax3" class="d-inline">16</p><span class="mr-3 tipo-unidades">°C</span><p class="d-inline" id="temp-min-3">11</p><span class="tipo-unidades">°C</span></div>
+                        <div class="col-auto px-0 mt-4 cards-clima p-2 text-center"><p class="dia-3 m-0 mb-1" id="caja4">d-f-ms</p><div class="container row m-0 p-0 mb-4 caja-imgs-chic"><img id="img-caja4" class="img-fluid row justify-content-center mx-0 mb-2 p-2 imgs-chic" src="./weather-app-master/LightCloud.png" alt="climas22"></div><p id="tempsmax4" class="d-inline">16</p><span class="mr-3 tipo-unidades">°C</span><p class="d-inline" id="temp-min-4">11</p><span class="tipo-unidades">°C</span></div>
+                    </div>
+        <!-- lado intermedio superior grados  -->
+        <!-- texto intermedio destacados de hoy  -->
+                    <div class="container row mx-0 px-0 mt-5">
+                        <h3 class="text-white">Destacados de Hoy:</h3>
+                    </div>
+        <!-- texto intermedio destacados de hoy  -->
+        <!-- grilla de destacados del dia  -->
+                    <div class="container row mx-0 mt-3 mx-md-0 px-0 text-white justify-content-between">
+                        <div class="col-auto mb-4 mb-md-2 mx-auto mx-md-0 card-destacadosTop"><p class="manan mt-3 text-center">Estado del viento</p><div class="container text-center"><p id="vientos" class="text-center texto-gd-md d-inline m-auto">7 </p><span class="texto-md-43"> m/s</span></div><div id="icono-vientos" class="container text-center"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-wind" viewBox="0 0 16 16">
+                            <path d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5zm-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2zM0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5z"/></svg></div></div>
+                        <div class="col-auto mb-4 mb-md-2 mx-auto mx-md-0 card-destacadosTop"><p class="manan2 mt-3 text-center">Humedad relativa</p><div class="container text-center"><p id="humedad-rel" class="text-center texto-gd-md m-0 d-inline">84 </p><span class="texto-md-43"> %</span></div><div id="porcentajes-humedad" class="container d-flex justify-content-between row m-0"><div>0</div><div>50</div><div>100</div> </div><div class="progress mx-3"><div id="barra-humedad" class="progress-bar bg-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div></div><div class="container m-0"><p class="text-right m-0">%</p></div></div>
+                        <div class="col-auto mb-4 mb-md-2 mx-auto mx-md-0 mt-md-4 card-destacadosBottom"><p class="manan2 mt-4 text-center">Visibilidad</p><div class="container text-center"><p id="visibilidad" class="text-center d-inline texto-gd-md">6,4 </p><span class="texto-md-43"> Km</span></div></div>
+                        <div class="col-auto mb-4 mb-md-2 mx-auto mx-md-0 mt-md-4 card-destacadosBottom"><p class="manan2 mt-4 text-center">Presión Atmosférica</p><div class="container text-center"><p id="presion-atmosferica" class="text-center d-inline texto-gd-md">998 </p><span class="texto-md-43"> mb</span></div></div>
+                    </div>
+        <!-- grilla de destacados del dia  -->
+        <!-- Footer del creador de la pagina  -->
+                    <div class="container m-4 "><p class="text-center text-secondary">Creado por <u><strong>GerardoRuiz</strong></u></p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, #ingresar, #ciudad1, #ciudad2, #ciudad3, #ciudad4, #ciudad5, #ciudad6, .overlay').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
